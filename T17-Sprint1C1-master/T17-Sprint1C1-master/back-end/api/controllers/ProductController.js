@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
   moment = require('moment'),
   Validations = require('../utils/Validations'),
-  Product = mongoose.model('Product');
+  Product = mongoose.model('Zeiad');
 
 module.exports.getProduct = function(req, res, next) {
   if (!Validations.isObjectId(req.params.productId)) {

@@ -54,6 +54,8 @@ export class HeaderComponent implements OnInit {
   onMenuClick(event) {
     if (event.title === 'Logout') {
       // Think about what to do ;)
+      document.cookie='null';
+     // window.location.href="#/auth/register"
     }
   }
 }
