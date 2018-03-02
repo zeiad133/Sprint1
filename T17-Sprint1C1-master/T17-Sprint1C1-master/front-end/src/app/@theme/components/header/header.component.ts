@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    this.userMenu = [{ title: 'Profile' },{ title: 'Settings' },{ title: 'Logout' }];
+    this.userMenu = [{ title: 'Profile' },{ title: 'Settings' }];
 
   }
 
@@ -43,18 +43,17 @@ export class HeaderComponent implements OnInit {
     this.menuService.navigateHome();
   }
 
-  login(){
-    window.location.href="#/auth/login"
-  }
+  
 
-  signup(){
-    window.location.href="#/auth/register"
+  signout(){
+    setTimeout(function() { alert("You are a guest now"); }, 5);
+    document.cookie="null"
   }
 
   onMenuClick(event) {
-    if (event.title === 'Logout') {
+    if (event.title == 'Profile') {
       // Think about what to do ;)
-      document.cookie='null';
+      console.log('aywa');
      // window.location.href="#/auth/register"
     }
   }
